@@ -17,7 +17,7 @@ describe('User Registration and Login', () => {
   
       cy.url().should('include', '/listcourse');
   
-      cy.contains('Create New Course');
+      cy.contains('Créer une nouvelle course');
     });
   });
   

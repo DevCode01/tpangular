@@ -8,7 +8,7 @@ describe('Login', () => {
   
       cy.url().should('include', '/listcourse');
   
-      cy.get('ul li').should('have.length.gte', 3);
+      cy.get('td').should('have.length.gte', 12);
     });
     });
   
