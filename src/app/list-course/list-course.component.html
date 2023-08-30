@@ -2,26 +2,39 @@
 
 <div class="container">
     <form [formGroup]="courseForm" (ngSubmit)="createCourse()" class="form-box">
-      <h3>Create New Course</h3>
+      <h3>Créer une nouvelle course</h3>
       <div class="form-group">
-        <label>Course Name</label>
-        <input type="text" formControlName="courseName" class="form-control mb-3 mt-3" placeholder="Enter Course Name" />
+        <label>Nom de la course</label>
+        <input type="text" formControlName="courseName" class="form-control mb-3 mt-3" />
       </div>
   
       <div class="form-group">
-        <label>Location (City Name)</label>
-        <input type="text" formControlName="location" class="form-control mb-3 mt-3" placeholder="Enter Location" />
+        <label>Lieu</label>
+        <input type="text" formControlName="location" class="form-control mb-3 mt-3"/>
       </div>
   
       <br />
-      <button type="submit" class="btn btn-success">Create Course</button>
+      <button type="submit" class="btn btn-success">Ajouter une course</button>
     </form>
-    <h3>Course List</h3>
-    <ul>
-      <li *ngFor="let course of courses">
-        {{ course.courseName }} - {{ course.location }}
-        <button class="btn btn-danger" (click)="deleteCourse(course.id)">Delete</button>
-      </li>
-    </ul>
+    <h3>Les différentes courses :</h3>
+    <table class="course-table">
+      <thead>
+        <tr>
+          <th>Nom de la course</th>
+          <th>Lieu</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let course of courses" class="course-item">
+          <td>{{ course.courseName }}</td>
+          <td>{{ course.location }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteCourse(course.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    
   </div>
   

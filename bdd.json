@@ -7,34 +7,10 @@
       "email": "aaa"
     },
     {
-      "username": "test",
-      "password": "test",
-      "email": "test",
-      "id": 2
-    },
-    {
-      "username": "mmm",
-      "password": "mmm",
-      "email": "mm",
-      "id": 4
-    },
-    {
-      "username": "ee",
-      "password": "ee",
-      "email": "ee@ee.fr",
-      "id": 5
-    },
-    {
-      "username": "pi",
-      "password": "pi",
-      "email": "pi@troisquatorze.com",
-      "id": 6
-    },
-    {
       "username": "userTest",
       "password": "userTest",
       "email": "userTest@mail.fr",
-      "id": 7
+      "id": 3
     }
   ],
   "course": [

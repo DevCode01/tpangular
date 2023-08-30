@@ -2,52 +2,85 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    background-color: #ffe5e5; /* Couleur pastel */
+    font-family: 'Arial', sans-serif;
   }
   
   .form-box1 {
-    background-color: #f0f0f0;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    width: 350px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    margin: 0 auto; /* Centrer le formulaire horizontalement */
+  }
+  
+  .form-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .left-align {
+    text-align: left;
   }
   
   .form-group label {
+    display: block;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+    text-align: left; 
   }
   
   .form-control {
-    width: 100%;
-    padding: 12px;
+    width: 95%;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    text-align: left; 
+  }
+  
+  .create-account {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .account-text {
+    margin-bottom: 5px;
+    color: #888;
     font-size: 14px;
   }
   
+  .button {
+    display: inline-block;
+    margin-left: 5px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .no-blue:hover {
+    text-decoration: none;
+  }
+  
   .btn-success {
-    background-color: #87c4a3;
-    color: white;
+    background-color: #6abf69;
+    color: #fff;
     border: none;
-    padding: 12px 18px;
     border-radius: 5px;
+    padding: 12px 24px;
     cursor: pointer;
+    font-size: 18px;
   }
   
   .btn-success:hover {
-    background-color: #6aa883;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #6e8aad;
-  }
-  
-  a:hover {
-    text-decoration: underline;
+    background-color: #5da65d;
   }
   
