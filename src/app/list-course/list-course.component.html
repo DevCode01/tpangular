@@ -1,0 +1,27 @@
+<button class="btn-logout" (click)="logout()">Logout</button>
+
+<div class="container">
+    <form [formGroup]="courseForm" (ngSubmit)="createCourse()" class="form-box">
+      <h3>Create New Course</h3>
+      <div class="form-group">
+        <label>Course Name</label>
+        <input type="text" formControlName="courseName" class="form-control mb-3 mt-3" placeholder="Enter Course Name" />
+      </div>
+  
+      <div class="form-group">
+        <label>Location (City Name)</label>
+        <input type="text" formControlName="location" class="form-control mb-3 mt-3" placeholder="Enter Location" />
+      </div>
+  
+      <br />
+      <button type="submit" class="btn btn-success">Create Course</button>
+    </form>
+    <h3>Course List</h3>
+    <ul>
+      <li *ngFor="let course of courses">
+        {{ course.courseName }} - {{ course.location }}
+        <button class="btn btn-danger" (click)="deleteCourse(course.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  

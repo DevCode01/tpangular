@@ -1,0 +1,52 @@
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
+import { AuthService } from '../auth.service';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  login: FormGroup | any;
+
+  constructor(
+    private _http: HttpClient,
+    private _route: Router,
+    private authService: AuthService // Inject AuthService
+  ) {}
+
+  ngOnInit(): void {
+    this.login = new FormGroup({
+      'username': new FormControl(),
+      'password': new FormControl()
+    });
+  }
+
+  logindata(login: FormGroup) {
+    this._http.get<any>('http://localhost:3000/register').subscribe(
+      (res) => {
+        const user = res.find((a: any) => {
+          return (
+            a.username === this.login.value.username &&
+            a.password === this.login.value.password
+          );
+        });
+
+        if (user) {
+          alert('Connexion réussie');
+          this.authService.login();
+          this._route.navigate(['listcourse']);
+        } else {
+          alert('User Not Found Or Password Incorrect');
+          this._route.navigate(['login']);
+        }
+      },
+      (err) => {
+        alert('Something was wrong');
+      }
+    );
+  }
+}
