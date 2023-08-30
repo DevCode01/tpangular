@@ -1,5 +1,8 @@
 # Cestlacourse
 
+/!\ UTILISATION DE JSON SERVER /!\  
+json-server --watch bdd.json  
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
 ## Development server
