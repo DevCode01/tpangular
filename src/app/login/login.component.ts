@@ -40,12 +40,12 @@ export class LoginComponent implements OnInit {
           this.authService.login();
           this._route.navigate(['listcourse']);
         } else {
-          alert('User Not Found Or Password Incorrect');
+          alert('Utilisateur ou mot de passe incorrect');
           this._route.navigate(['login']);
         }
       },
       (err) => {
-        alert('Something was wrong');
+        alert('Aïe il y a de la casse ici');
       }
     );
   }

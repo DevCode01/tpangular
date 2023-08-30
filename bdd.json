@@ -25,14 +25,14 @@
       "id": 5
     },
     {
-      "courseName": "Isitech",
-      "location": "Lyon",
-      "id": 6
-    },
-    {
       "courseName": "Isima",
       "location": "Clermont-Ferrand",
       "id": 7
+    },
+    {
+      "courseName": "Isitech",
+      "location": "Lyon",
+      "id": 8
     }
   ]
 }

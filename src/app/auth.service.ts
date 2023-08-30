@@ -16,13 +16,11 @@ export class AuthService {
   ) {}
 
   login() {
-    // Logic to authenticate user
     this.isAuthenticated = true;
     console.log("set to TRUE");
   }
 
   logout() {
-    // Logic to log out user
     this.isAuthenticated = false;
   }
 

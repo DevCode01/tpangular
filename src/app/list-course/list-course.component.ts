@@ -48,37 +48,35 @@ export class ListCourseComponent implements OnInit {
       this._http.post<any>('http://localhost:3000/course', courseData)
         .subscribe(
           res => {
-            alert('Course created successfully');
+            alert('Course correctement créée');
             this.courseForm.reset();
-            this.loadCourses(); // Refresh the course list
+            this.loadCourses(); 
           },
           err => {
-            alert('Error creating course');
+            alert('Erreur lors de la création de la course');
           }
         );
     } else {
-      alert('Please fill in all fields.');
+      alert('Merci de compléter tous les champs.');
     }
   }
 
   deleteCourse(courseId: number) {
-    if (confirm('Are you sure you want to delete this course?')) {
+    if (confirm('Voulez-vous supprimer cette course ?')) {
       this._http.delete(`http://localhost:3000/course/${courseId}`)
         .subscribe(
           res => {
-            alert('Course deleted successfully');
+            alert('Course supprimée');
             this.loadCourses(); // Refresh the course list
           },
           err => {
-            alert('Error deleting course');
+            alert('Erreur lors de la suppression de la course');
           }
         );
     }
   }
 
   logout() {
-    // Here, you can implement your logout logic
-    // For example, navigate to the login page
     this._route.navigate(['login']);
   }
 }

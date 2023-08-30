@@ -29,16 +29,16 @@ export class RegisterComponent implements OnInit {
       this._http.post<any>("http://localhost:3000/register", this.signup.value)
         .subscribe(
           res => {
-            alert('Data added successfully');
+            alert('Nouvel utilisateur ajouté');
             this.signup.reset();
             this._route.navigate(['login']);
           },
           err => {
-            alert('Something went wrong');
+            alert('Souci technique');
           }
         );
     } else {
-      alert('Form is not valid');
+      alert('Saisie invalide');
     }
   }
   
