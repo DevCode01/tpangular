@@ -18,23 +18,26 @@
     </form>
     <h3>Les différentes courses :</h3>
     <table class="course-table">
-      <thead>
-        <tr>
-          <th>Nom de la course</th>
-          <th>Lieu</th>
-          <th>Actions</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let course of courses" class="course-item">
-          <td>{{ course.courseName }}</td>
-          <td>{{ course.location }}</td>
-          <td>
-            <button class="btn btn-danger" (click)="deleteCourse(course.id)">Delete</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+        <thead>
+          <tr>
+            <th>Nom de la course</th>
+            <th>Lieu</th>
+            <th>Créée le </th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses" class="course-item">
+            <td>{{ course.courseName }}</td>
+            <td>{{ course.location }}</td>
+            <td>{{ course.createdAt | date }}</td>
+            <td>
+              <button class="btn btn-danger" (click)="deleteCourse(course.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
     
   </div>
   

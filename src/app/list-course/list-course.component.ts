@@ -7,6 +7,7 @@ interface Course {
   id: number;
   courseName: string;
   location: string;
+  createdAt: string;
 }
 
 @Component({
@@ -43,9 +44,20 @@ export class ListCourseComponent implements OnInit {
 
   createCourse() {
     const courseData = this.courseForm.value;
-
+  
     if (courseData.courseName && courseData.location) {
-      this._http.post<any>('http://localhost:3000/course', courseData)
+      const currentDate = new Date();
+      const year = currentDate.getFullYear();
+      const month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Note: Les mois sont indexés à partir de 0
+      const day = currentDate.getDate().toString().padStart(2, '0');
+  
+      const newCourse = {
+        courseName: courseData.courseName,
+        location: courseData.location,
+        createdAt: `${year}-${month}-${day}`
+      };
+  
+      this._http.post<any>('http://localhost:3000/course', newCourse)
         .subscribe(
           res => {
             alert('Course correctement créée');
@@ -60,6 +72,8 @@ export class ListCourseComponent implements OnInit {
       alert('Merci de compléter tous les champs.');
     }
   }
+  
+  
 
   deleteCourse(courseId: number) {
     if (confirm('Voulez-vous supprimer cette course ?')) {
@@ -67,7 +81,7 @@ export class ListCourseComponent implements OnInit {
         .subscribe(
           res => {
             alert('Course supprimée');
-            this.loadCourses(); // Refresh the course list
+            this.loadCourses(); 
           },
           err => {
             alert('Erreur lors de la suppression de la course');
