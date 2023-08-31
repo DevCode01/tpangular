@@ -14,7 +14,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { DateFormatPipe } from './date-format.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +22,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     RegisterComponent,
     PageNotFoundComponent,
     ListCourseComponent,
+    DateFormatPipe,
   ],
   imports: [
     BrowserModule,

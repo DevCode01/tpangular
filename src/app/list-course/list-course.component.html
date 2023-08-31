@@ -31,7 +31,7 @@
           <tr *ngFor="let course of courses" class="course-item">
             <td>{{ course.courseName }}</td>
             <td>{{ course.location }}</td>
-            <td>{{ course.createdAt | date }}</td>
+            <td>{{ course.createdAt | dateFormat:'dd MMM yyyy' }}</td>
             <td>
               <button class="btn btn-danger" (click)="deleteCourse(course.id)">Delete</button>
             </td>
