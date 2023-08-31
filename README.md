@@ -1,30 +1,47 @@
-# Cestlacourse
+# Application de Gestion de Courses
 
-/!\ UTILISATION DE JSON SERVER /!\  
-json-server --watch bdd.json  
+Ceci est une application de gestion de courses développée en utilisant Angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Fonctionnalités
 
-## Development server
+- Création de nouvelles courses avec leur nom, lieu et date de création.
+- Affichage de la liste des courses existantes.
+- Suppression de courses.
+- Connexion avec un formulaire de login.
+- Authentification basique avec redirection et protection de certaines pages.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies Utilisées
 
-## Code scaffolding
+- Angular
+- Angular Material
+- Bootstrap (pour la mise en page et les styles)
+- JSON Server (pour la gestion de la base de données simulée)
+- HTTP Client (pour les appels API)
+- Formulaires Réactifs (pour la gestion des formulaires)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Prérequis
 
-## Build
+- Node.js et npm installés sur votre machine.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+1. Clonez ce dépôt vers votre machine.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2. Accédez au répertoire du projet dans votre terminal.
 
-## Running end-to-end tests
+3. Exécutez la commande suivante pour installer les dépendances :
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+4. Exécutez le serveur JSON en utilisant la commande suivante :
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+5. Dans un autre terminal, démarrez l'application Angular :
+
+
+6. Ouvrez votre navigateur et accédez à l'URL : http://localhost:4200/
+
+7. Lancer le json-server: json-server --watch bdd.json
+
+## Auteur
+
+BEGUET Meryg

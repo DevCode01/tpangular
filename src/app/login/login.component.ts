@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (err) => {
-        alert('Aïe il y a de la casse ici');
+        alert('Aïe il y a de la casse');
       }
     );
   }

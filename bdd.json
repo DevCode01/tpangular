@@ -4,13 +4,43 @@
       "id": 1,
       "username": "aa",
       "password": "aa",
-      "email": "aaa"
+      "email": "aaa",
+      "login": 0
     },
     {
       "username": "userTest",
       "password": "userTest",
       "email": "userTest@mail.fr",
-      "id": 3
+      "id": 3,
+      "login": 0
+    },
+    {
+      "username": "turlututu",
+      "password": "chapeaupointu",
+      "email": "turlututu@chapeaupointu.fr",
+      "id": 4,
+      "login": 0
+    },
+    {
+      "username": "test",
+      "password": "test",
+      "email": "test@test.fr",
+      "id": 5,
+      "login": 0
+    },
+    {
+      "username": "userTest",
+      "password": "userTest",
+      "email": "userTest@mail.fr",
+      "id": 6,
+      "login": 0
+    },
+    {
+      "username": "userTest",
+      "password": "userTest",
+      "email": "userTest@mail.fr",
+      "id": 7,
+      "login": 0
     }
   ],
   "course": [
@@ -18,25 +48,14 @@
       "courseName": "aa",
       "location": "aa",
       "createdAt": "2023-08-31",
-      "id": 5
+      "id": 5,
+      "login": 0
     },
     {
       "courseName": "bb",
       "location": "bb",
       "createdAt": "2023-08-31",
       "id": 6
-    },
-    {
-      "courseName": "pp",
-      "location": "pp",
-      "createdAt": "2023-08-31",
-      "id": 7
-    },
-    {
-      "courseName": "nn",
-      "location": "nn",
-      "createdAt": "2023-08-31",
-      "id": 8
     },
     {
       "courseName": "Isitech",
@@ -49,6 +68,18 @@
       "location": "Clermont-Ferrand",
       "createdAt": "2023-08-31",
       "id": 10
+    },
+    {
+      "courseName": "iihihi",
+      "location": "eieie",
+      "createdAt": "2023-08-31",
+      "id": 11
+    },
+    {
+      "courseName": "ppp",
+      "location": "ppp",
+      "createdAt": "2023-08-31",
+      "id": 12
     }
   ]
 }
